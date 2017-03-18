@@ -1,0 +1,19 @@
+﻿@model MVCExample.ViewModels.Garage.CarsListViewModel
+
+@{
+    ViewBag.Title = "CarsList";
+}
+
+<h2>All cars</h2>
+@Html.ListBox("carsList", Model.CarsList);
+
+<h2>Fastest car</h2>
+<dl>
+    <dt>Id</dt>
+    <dt>@Model.FastestCar.ID</dt>
+    <dt>Model</dt>
+    <dt>@Model.FastestCar.Model</dt>
+    <dt>Max speed</dt>
+    <dt>@Model.FastestCar.Maxspeed</dt>
+</dl>
+
